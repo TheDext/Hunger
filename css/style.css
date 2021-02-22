@@ -1504,6 +1504,23 @@ body.lock {
   transition: min-height 0.3s ease 0s;
 }
 
+body._mobile .header._fixed .header__menu,
+body._mobile .header._fixed:hover .header__menu {
+  min-height: 45px;
+}
+body._mobile .header._fixed .header__menu li::before,
+body._mobile .header._fixed:hover .header__menu li::before {
+  display: none;
+}
+body._mobile .header._fixed .header__menu .header__link,
+body._mobile .header._fixed:hover .header__menu .header__link {
+  font-size: 16px;
+}
+
+body._mobile .header._fixed .header__logo {
+  display: none;
+}
+
 @-webkit-keyframes rotation {
   0% {
     -webkit-transform: translate(-50%, 0) rotate(0deg);
@@ -2231,6 +2248,7 @@ body.lock {
           flex: 0 1 50%;
   padding: 10px;
   position: relative;
+  z-index: 60;
 }
 .book-table__item label {
   display: block;
@@ -2346,6 +2364,7 @@ body.lock {
   border-top: 0;
   font-size: 14px;
   padding: 10px 0px 5px 0px;
+  z-index: 60;
 }
 .book-table__item_people .select__option {
   cursor: pointer;
@@ -2718,6 +2737,10 @@ body.lock {
 .book-table__item_date input {
   color: rgba(0, 0, 0, 0.5);
 }
+.book-table__item_time {
+  position: relative;
+  z-index: 50;
+}
 .book-table__item_time .select {
   position: relative;
   font-family: "Open Sans";
@@ -2797,6 +2820,7 @@ body.lock {
   border-top: 0;
   font-size: 14px;
   padding: 10px 0px 5px 0px;
+  z-index: 60;
 }
 .book-table__item_time .select__option {
   cursor: pointer;
@@ -2825,6 +2849,8 @@ body.lock {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100%;
           flex: 0 1 100%;
+  position: relative;
+  z-index: 40;
 }
 .book-table__item.book-table__item_button button {
   background-color: #E8C300;
@@ -3497,6 +3523,37 @@ body.lock {
 }
 .events__call span {
   font-weight: 800;
+}
+
+.events__column_wedding .img-label {
+  -webkit-transform: translate(-10px, 0);
+      -ms-transform: translate(-10px, 0);
+          transform: translate(-10px, 0);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.events__column_corporative .img-label {
+  -webkit-transform: translate(10px, 0);
+      -ms-transform: translate(10px, 0);
+          transform: translate(10px, 0);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.events._active .events__column_wedding .img-label,
+.events._active .events__column_corporative .img-label {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 @media (max-width: 450px) {

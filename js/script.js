@@ -109,10 +109,10 @@ if (aboutLink) {
 
 
 
-let inp = document.getElementById('contactName');
-inp.oninvalid = function(event) {
-   event.target.setCustomValidity('Не тупи!');
-}
+// let inp = document.getElementById('contactName');
+// inp.oninvalid = function(event) {
+//    event.target.setCustomValidity('Не тупи!');
+// }
 
 
 
@@ -134,3 +134,9 @@ inp.oninvalid = function(event) {
 // }
 
 
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+   body.classList.add('_mobile');
+ } else {
+   body.classList.remove('_mobile');
+}

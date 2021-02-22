@@ -828,16 +828,16 @@
 				</div>
 				<div class="gallary _scr-item" id="gallary">
 					<div class="gallary__body _gallery">
-						<a href="/img/photos/01.jpg" class="gallary__item">
+						<a href="img/photos/01.jpg" class="gallary__item">
 							<img src="img/photos/01.jpg" alt="">
 						</a>
-						<a href="/img/photos/02.jpg" class="gallary__item">
+						<a href="img/photos/02.jpg" class="gallary__item">
 							<img src="img/photos/02.jpg" alt="">
 						</a>
-						<a href="/img/photos/03.jpg" class="gallary__item">
+						<a href="img/photos/03.jpg" class="gallary__item">
 							<img src="img/photos/03.jpg" alt="">
 						</a>
-						<a href="/img/photos/04.jpg" class="gallary__item">
+						<a href="img/photos/04.jpg" class="gallary__item">
 							<img src="img/photos/04.jpg" alt="">
 						</a>
 					</div>
@@ -848,10 +848,10 @@
 						<div class="contact__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</div>
 						<form action="#" class="contact__form form-contact">
 							<div class="form-contact__item form-contact__item_name">
-								<input autocomplete="off" type="text" name="form[]" placeholder="Name" id="contactName" data-error="Ошибка" data-value="">
+								<input autocomplete="off" type="text" name="form[]" placeholder="Name" id="contactName" data-error="Ошибка" data-value="" required>
 							</div>
 							<div class="form-contact__item form-contact__item_email">
-								<input autocomplete="off" type="text" name="form[]" placeholder="Email" id="contactEmail">
+								<input autocomplete="off" type="text" name="form[]" placeholder="Email" id="contactEmail" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required>
 							</div>
 							<div class="form-contact__item form-contact__item_phone">
 								<input autocomplete="off" type="text" name="form[]" placeholder="Phone" id="contactPhone">
